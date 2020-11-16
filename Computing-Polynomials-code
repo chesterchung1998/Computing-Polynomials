@@ -1,0 +1,11 @@
+def calc_poly(const_seq,var_poly):
+    l = len(const_seq)
+    total = 0
+    properlist = list(const_seq)
+    properlist.reverse()
+    for i in properlist:
+        total += i*((var_poly)**(l-1))
+        l = l - 1
+    if type(total) == float:
+        total = round(total, 2)
+    return total
